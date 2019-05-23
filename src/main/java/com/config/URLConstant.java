@@ -50,4 +50,11 @@ public class URLConstant {
      */
     public static final String URL_GET_DEPARTMENT_LIST  = "https://oapi.dingtalk.com/department/list";
 
+    /**
+     * user
+     */
+    public interface User{
+        static final String URL_GET_USERID_LIST = "https://oapi.dingtalk.com/user/getDeptMember";
+    }
+
 }
