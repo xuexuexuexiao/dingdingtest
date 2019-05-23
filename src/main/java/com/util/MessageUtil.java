@@ -13,10 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
-/**
- * @author 令久
- * @date 2018/08/28
- */
+
 public class MessageUtil {
     private static final Logger bizLogger = LoggerFactory.getLogger(MessageUtil.class);
 

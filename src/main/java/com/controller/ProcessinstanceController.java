@@ -44,10 +44,12 @@ public class ProcessinstanceController {
 
 	/**
 	 * 发起审批
+	 * @param processInstance  审批实例VO
+	 * @return
 	 */
 	@RequestMapping(value = "/processinstance/start", method = RequestMethod.POST)
 	@ResponseBody
-	public ServiceResult<String> startProcessInstance(@RequestBody ProcessInstanceInputVO processInstance) {
+		public ServiceResult<String> startProcessInstance(@RequestBody ProcessInstanceInputVO processInstance) {
 		try {
 			DefaultDingTalkClient client = new DefaultDingTalkClient(URLConstant.URL_PROCESSINSTANCE_START);
 			OapiProcessinstanceCreateRequest request = new OapiProcessinstanceCreateRequest();
@@ -55,10 +57,7 @@ public class ProcessinstanceController {
 
 			request.setFormComponentValues(processInstance.generateForms());
 
-			/**
-			 * 如果想复用审批固定流程，使用或签会签的话，可以不传审批人，具体请参考文档： https://open-doc.dingtalk.com/microapp/serverapi2/ebkwx8
-			 * 本次quickstart，演示不传审批人的场景
-			 */
+
 			request.setApprovers(processInstance.getOriginatorUserId());
 			request.setOriginatorUserId(processInstance.getOriginatorUserId());
 			request.setDeptId(processInstance.getDeptId());

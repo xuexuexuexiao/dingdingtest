@@ -10,9 +10,7 @@ import com.dingtalk.api.request.OapiProcessinstanceCreateRequest.FormComponentVa
 import org.springframework.util.CollectionUtils;
 
 /**
- * @author 令久
- * @date 2018/08/22
- * 审批实例
+ *
  */
 public class ProcessInstanceInputVO {
     /**

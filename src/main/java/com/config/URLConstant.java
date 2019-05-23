@@ -1,5 +1,8 @@
 package com.config;
 
+/**
+ * 常量Url
+ */
 public class URLConstant {
     /**
      * 钉钉网关gettoken地址
@@ -40,5 +43,11 @@ public class URLConstant {
      * 注册企业回调接口url
      */
     public static final String REGISTER_CALLBACK = "https://oapi.dingtalk.com/call_back/register_call_back";
+
+
+    /**
+     * 获取部门列表url
+     */
+    public static final String URL_GET_DEPARTMENT_LIST  = "https://oapi.dingtalk.com/department/list";
 
 }
